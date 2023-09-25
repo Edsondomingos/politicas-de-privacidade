@@ -9,15 +9,14 @@
     <script>
         function abrirAnuncio(urlAnuncio) {
             window.location.href = (urlAnuncio)
-            // console.log(urlAnuncio)
-            // history.pushState(null,null, urlAnuncio)
         }
 
         const urlAtual = window.location.href
         
-        if (urlAtual.indexOf('n=1') != -1) abrirAnuncio('https://google.com')
-        else if (urlAtual.indexOf('n=2') != -1) abrirAnuncio('vendoitens.vercel.app')
-        else if (urlAtual.indexOf('n=3') != -1) abrirAnuncio('linksingrid.vercel.app')
+        if (urlAtual.indexOf('n=1') != -1) abrirAnuncio('instalar.html')
+        else if (urlAtual.indexOf('n=2') != -1) abrirAnuncio('https://vendoitens.vercel.app')
+        else if (urlAtual.indexOf('n=3') != -1) abrirAnuncio('https://linksingrid.vercel.app')
+        else if (urlAtual.indexOf('n=add') != -1) abrirAnuncio('https://api.whatsapp.com/send?phone=5584935009506&text=Ola,+gostaria+de+adicionar+meu+negocio+no+ACHEI!')
 
     </script>
 </body>

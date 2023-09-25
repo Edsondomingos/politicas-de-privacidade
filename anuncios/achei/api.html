@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Lojas</title>
+</head>
+<body>
+
+
+<p id="dados"></p>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+
+        // axios.get(`https://clucky-warranty.000webhostapp.com/api_app.php`)
+        axios.get(`http://localhost:8000/site-online/api_app.php`)
+            .then((response) => {
+                const repos = response.data
+                // console.log(repos)
+                let p = document.querySelector('#dados')
+                let info = []
+                p.textContent += '['
+                for(let i=0; i < Object.keys(repos).length; i++){
+                    let chave = Object.keys(repos[i])
+                    let valor = Object.values(repos[i])
+                    // console.log(i)
+                    p.textContent += chave + [valor]
+                }
+                p.textContent += ']'
+                // repos.forEach(element => {
+                //     info.push(element)
+                // })
+                // p.textContent = info
+            })
+
+
+        // fetch(`dados.json`)
+        //     .then(resposta => resposta.json())
+        //     .then(dados => {
+        //         console.log(dados)
+        //     })
+        //     .catch(e => {
+        //         console.log(e)
+        //     })
+        
+    </script>
+</body>
+</html>
