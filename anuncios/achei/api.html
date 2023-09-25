@@ -14,12 +14,13 @@
     <script>
 
         // axios.get(`https://clucky-warranty.000webhostapp.com/api_app.php`)
-        axios.get(`http://localhost:8000/site-online/api_app.php`)
+        axios.get(`https://clucky-warranty.000webhostapp.com/api_app.php`)
             .then((response) => {
                 const repos = response.data
                 // console.log(repos)
-                let p = document.querySelector('#dados')
-                let info = []
+                let dadosApi = document.querySelector('#dados')
+                dadosApi.textContent = repos
+                /*let info = []
                 p.textContent += '['
                 for(let i=0; i < Object.keys(repos).length; i++){
                     let chave = Object.keys(repos[i])
@@ -27,7 +28,7 @@
                     // console.log(i)
                     p.textContent += chave + [valor]
                 }
-                p.textContent += ']'
+                p.textContent += ']'*/
                 // repos.forEach(element => {
                 //     info.push(element)
                 // })
