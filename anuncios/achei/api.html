@@ -12,29 +12,22 @@
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-
-        // axios.get(`https://clucky-warranty.000webhostapp.com/api_app.php`)
+        let dados = []
         axios.get(`https://clucky-warranty.000webhostapp.com/api_app.php`)
+        // axios.get(`http://localhost:8000/site-online/api_app.php`)
             .then((response) => {
                 const repos = response.data
                 // console.log(repos)
                 let dadosApi = document.querySelector('#dados')
-                dadosApi.textContent = repos
-                /*let info = []
-                p.textContent += '['
-                for(let i=0; i < Object.keys(repos).length; i++){
-                    let chave = Object.keys(repos[i])
-                    let valor = Object.values(repos[i])
+                // let dados = []
+                for(let i of repos){
                     // console.log(i)
-                    p.textContent += chave + [valor]
+                    // let chave = Object.keys(repos[i])
+                    // let valor = Object.values(repos[i])
+                    dados.push(JSON.stringify(i))
                 }
-                p.textContent += ']'*/
-                // repos.forEach(element => {
-                //     info.push(element)
-                // })
-                // p.textContent = info
+                dadosApi.innerHTML = dados
             })
-
 
         // fetch(`dados.json`)
         //     .then(resposta => resposta.json())
