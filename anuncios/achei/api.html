@@ -21,12 +21,10 @@
                 let dadosApi = document.querySelector('#dados')
                 // let dados = []
                 for(let i of repos){
-                    // console.log(i)
-                    // let chave = Object.keys(repos[i])
-                    // let valor = Object.values(repos[i])
-                    dados.push(JSON.stringify(i))
+                    // dados.push(JSON.stringify(i))
+                    dados.push(i)
                 }
-                dadosApi.innerHTML = dados
+                dadosApi.innerHTML = JSON.stringify(dados)
             })
 
         // fetch(`dados.json`)
