@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +13,13 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
         let dados = []
-        axios.get(`https://clucky-warranty.000webhostapp.com/api_app.php`)
+        // axios.get(`https://clucky-warranty.000webhostapp.com/api_app.php`)
         // axios.get(`http://localhost:8000/site-online/api_app.php`)
+        axios.get(`http://127.0.0.1:3000/api`)
+        
             .then((response) => {
                 const repos = response.data
-                // console.log(repos)
+                console.log(repos)
                 let dadosApi = document.querySelector('#dados')
                 // let dados = []
                 for(let i of repos){
